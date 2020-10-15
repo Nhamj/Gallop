@@ -27,6 +27,7 @@
         	" " + document.getElementById("lastName").value;
         	profile.un = document.getElementById("username").value;
         	profile.pw = document.getElementById("password").value;
+		document.write("Account Created!");
         }
         
         // Log-in function
