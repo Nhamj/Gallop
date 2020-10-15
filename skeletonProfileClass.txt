@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h2 style=font-family:verdana>Create an Account</h2>
+
+	<p style=font-family:verdana>Enter the following information:</p>
+    
+    <input type="text" placeholder="Username" id="username"><br>
+    <input type="text" placeholder="First Name" id="firstName"><br>
+    <input type="text" placeholder="Last Name" id="lastName"><br>
+    <input type="text" placeholder="Password" id="password"><br>
+    <button type="button" onclick="getInput()">Submit</button>
+
+	<script>
+		// Create the profile object
+		var profile = {
+  			pn : undefined,
+  			un : undefined,
+  			pw : undefined
+		};
+        
+        // Retrieve input
+        function getInput() {
+        	var car = document.getElementById("username").value;
+        	profile.pn = document.getElementById("firstName").value +
+        	" " + document.getElementById("lastName").value;
+        	profile.un = document.getElementById("username").value;
+        	profile.pw = document.getElementById("password").value;
+        }
+        
+        // Log-in function
+        // TODO: have it search a set of users for matching username
+        // and check if password matches
+        function login(username, password) {
+        	if(username == profile.un && password == profile.pw)
+            	return true;
+            else
+            	return false;
+        }
+	</script>
+</body>
+</html>
