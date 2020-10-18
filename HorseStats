@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Horse Stats</title>
+<style>
+body{
+  width:90%;
+  margin:0 auto;
+}
+
+table {
+float:left;
+margin:10px;
+border-spacing:10px;
+}
+
+th, td {
+border: 1px solid;
+border-collapse:collapse;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Horse Stats</h1>
+<p>Displays Horses.</p>
+
+<!---- Displays button that is shifted to the right side of the page ---->
+<button type="button" style="float: right;" onclick="addHorse()">Add Horse</button>
+
+<br>
+
+<!---- This the table where we will input information ---->
+<table height = 109 width=14%>
+  <tr>
+    <th>Picture</th>
+  </tr>
+</table>
+
+<table>
+ <tr>
+    <th id="name">Name</th>
+ </tr>
+ 	
+ <tr>
+ 	<th id="school">School</th>
+ </tr>
+ 
+ <tr>
+ 	<th id="division">Division(s)</th>
+ </tr>
+</table>
+
+<table height = 109 width = 66%>
+  <tr>
+    <th id="description">General description or fun facts</th>
+  </tr>
+</table>
+
+<!---- The method to add information to the table ---->
+<script>
+function addHorse() {
+	var name = prompt("Enter horse name");
+    var school = prompt("Enter school name");
+    var division = prompt("Enter division");
+    var descriptions = prompt("Enter description about horse");
+    document.getElementById("name").innerHTML = name;
+    document.getElementById("school").innerHTML = school;
+    document.getElementById("division").innerHTML = division;
+    document.getElementById("description").innerHTML = descriptions;
+}
+</script>
+
+</body>
+</html>
+
