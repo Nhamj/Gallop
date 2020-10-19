@@ -22,7 +22,6 @@
         
         // Retrieve input
         function getInput() {
-        	var car = document.getElementById("username").value;
         	profile.pn = document.getElementById("firstName").value +
         	" " + document.getElementById("lastName").value;
         	profile.un = document.getElementById("username").value;
